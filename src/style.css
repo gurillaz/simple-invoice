@@ -59,6 +59,7 @@
     overflow: unset;
     box-shadow: none;
     scale: 1;
+    display: block;
   }
 
   .print_preview {

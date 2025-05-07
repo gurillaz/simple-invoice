@@ -6,4 +6,7 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [vue(), tailwindcss(),],
   base: process.env.NODE_ENV === 'production' ? '/simple-invoice/' : '/',
+  server: {
+    host: true,
+  },
 })
