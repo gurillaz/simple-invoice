@@ -1,0 +1,1 @@
+Simple Invoice Generator  - A Vue.js application designed for creating professional invoices in German, featuring customizable company and client details, line item management with automatic calculations and PDF generation for easy printing and sharing.

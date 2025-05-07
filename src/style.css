@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@media print {
+  @page {
+    size: A4 portrait;
+
+
+    /* Counter for page numbers */
+    counter-increment: page;
+
+    /* Print page number at bottom center */
+    @bottom-center {
+      content: counter(page);
+      font-family: Arial, sans-serif;
+      font-size: 10pt;
+    }
+  }
+
+  /* Hide URL and date in Chrome */
+  @page :footer {
+    display: none;
+  }
+
+  @page :header {
+    display: none;
+  }
+
+  /* Hide URL and title in Firefox */
+  body {
+    /* This works in some browsers */
+    prince-print-urls: none;
+    -webkit-print-urls: none;
+  }
+
+  /* Force background printing */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  /* Optional: Add your own page number styling */
+  .page-number:after {
+    content: counter(page);
+  }
+
+  .no_print {
+    display: none;
+  }
+
+  .clear_view {
+    padding: 0px;
+    background-color: white;
+    margin: 0px;
+    grid-column: auto;
+    padding: 0px;
+    box-shadow: none;
+    max-width: auto;
+    min-height: auto;
+    overflow: unset;
+    box-shadow: none;
+    scale: 1;
+  }
+
+  .print_preview {
+    box-shadow: none !important;
+    width: 210mm;
+    min-height: 297mm;
+    padding: 20mm;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+}
